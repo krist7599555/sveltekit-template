@@ -1,0 +1,15 @@
+@import url('@fontsource/noto-sans');
+@import url('@fontsource/noto-sans-thai');
+@import url('@fontsource/noto-sans-thai/700.css');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@tailwind variants;
+
+@layer base {
+  :root {
+    font-display: block;
+    font-family: 'Noto Sans Thai', 'Noto Sans', -apple-system, Roboto, sans-serif;
+  }
+}

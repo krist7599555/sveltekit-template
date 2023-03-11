@@ -1,0 +1,76 @@
+{
+  "name": "hinladnaitrip.com",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "wireit",
+    "build": "wireit",
+    "preview": "wireit",
+    "check": "wireit",
+    "check:watch": "wireit",
+    "lint": "wireit",
+    "format": "wireit"
+  },
+  "wireit": {
+    "dev": {
+      "service": true,
+      "command": "vite dev"
+    },
+    "build": {
+      "command": "vite build"
+    },
+    "preview": {
+      "command": "vite preview"
+    },
+    "check": {
+      "command": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json"
+    },
+    "check:watch": {
+      "command": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch"
+    },
+    "lint": {
+      "command": "prettier --plugin-search-dir . --check . && eslint . --fix",
+      "dependencies": [
+        "format"
+      ]
+    },
+    "format": {
+      "command": "prettier --plugin-search-dir . --write ."
+    }
+  },
+  "packageManager": "pnpm@7.29.1",
+  "devDependencies": {
+    "@fontsource/noto-sans": "^4.5.11",
+    "@fontsource/noto-sans-thai": "^4.5.13",
+    "@sveltejs/adapter-auto": "^2.0.0",
+    "@sveltejs/kit": "^1.5.0",
+    "@trivago/prettier-plugin-sort-imports": "^4.1.1",
+    "@types/lodash-es": "^4.17.6",
+    "@types/postcss-import": "^14.0.0",
+    "@typescript-eslint/eslint-plugin": "^5.45.0",
+    "@typescript-eslint/parser": "^5.45.0",
+    "autoprefixer": "^10.4.14",
+    "cssnano": "^5.1.15",
+    "eslint": "^8.28.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-simple-import-sort": "^10.0.0",
+    "eslint-plugin-svelte3": "^4.0.0",
+    "fractils": "^3.1.1",
+    "lodash-es": "^4.17.21",
+    "pnpm": "^7.29.1",
+    "postcss": "^8.4.21",
+    "postcss-import": "^15.1.0",
+    "prettier": "^2.8.0",
+    "prettier-plugin-svelte": "^2.8.1",
+    "prettier-plugin-tailwindcss": "^0.2.4",
+    "svelte": "^3.54.0",
+    "svelte-check": "^3.0.1",
+    "svelte-meta-tags": "^2.7.0",
+    "tailwindcss": "^3.2.7",
+    "tslib": "^2.4.1",
+    "typescript": "^4.9.3",
+    "vite": "^4.0.0",
+    "wireit": "^0.9.5"
+  },
+  "type": "module"
+}
